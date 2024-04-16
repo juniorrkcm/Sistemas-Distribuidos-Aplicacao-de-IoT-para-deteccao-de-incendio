@@ -32,32 +32,32 @@ ________________________________________________________________________________
 
 Este tutorial visa fornecer instruções passo a passo para configurar e executar o projeto de simulação de detecção de incêndio utilizando a temperatura da CPU como referência.
 
-## 1-Iniciar o Serviço do RabbitMQ
+## 1 Iniciar o Serviço do RabbitMQ
 Inicie o serviço do RabbitMQ. Em sistemas Linux, você pode fazer isso executando o seguinte comando no terminal:
 
 
 `sudo rabbitmq-server start`
 
-## 2-Execute o produtor de mensagens:
+## 2 Execute o produtor de mensagens:
 
 
-`python pt2.py`
+`python3 pt2.py`
 
 Se desejar fornecer uma temperatura específica, você pode fazer isso como argumento de linha de comando:
 Copy code
 
-`python pt2.py 80.0`
+`python3 pt2.py 80.0`
 
-## 3-Executar o Consumidor para Verificar a Temperatura (cdi.py)
+## 3 Executar o Consumidor para Verificar a Temperatura (cdi.py)
 Abra um novo terminal e Execute o consumidor para verificar a temperatura:
 
 
-`python cdi.py`
+`python3 cdi.py`
 
-## 4-Executar o Consumidor para Detectar Incêndio (cda.py)
+## 4 Executar o Consumidor para Detectar Incêndio (cda.py)
 Abra um novo terminal e Execute o consumidor para detectar incêndio:
 
-`python cda.py`
+`python3 cda.py`
 
-## 5-Observações
+## 5 Observações
 Certifique-se de que o RabbitMQ esteja em execução antes de executar os códigos. 
