@@ -62,11 +62,3 @@ Abra um novo terminal e Execute o consumidor para verificar a temperatura:
 Abra um novo terminal e Execute o consumidor para detectar incêndio:
 
 `python3 cda.py`
-
-<<<<<<< HEAD
-## 5 Observações
-Certifique-se de que o RabbitMQ esteja em execução antes de executar os códigos. 
-=======
-## 5-Observações
-Certifique-se de que o RabbitMQ esteja em execução antes de executar os códigos. 
->>>>>>> 3236aea214149ba883da88ee35dcee7a8e7ea67f
