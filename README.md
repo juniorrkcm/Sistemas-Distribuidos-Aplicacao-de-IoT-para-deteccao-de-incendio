@@ -23,3 +23,38 @@ O terceiro componente é responsável por receber mensagens do tópico "fire_det
 
 ## Conclusão
 A aplicação desenvolvida demonstra a utilização prática de conceitos de IoT para simular a detecção de incêndio com base na temperatura da CPU. O uso do RabbitMQ como sistema de mensagens e a biblioteca psutil para obter informações da CPU permitiram a criação de um sistema simples, porém funcional, para este propósito específico. A inclusão da opção de fornecer manualmente uma temperatura para simular a temperatura da CPU aumentou a robustez do sistema ao permitir testar a funcionalidade de detecção de incêndio mesmo em ambientes onde não era possível obter a temperatura real da CPU.
+
+
+Tutorial de Configuração e Execução do Projeto
+Este tutorial visa fornecer instruções passo a passo para configurar e executar o projeto de simulação de detecção de incêndio utilizando a temperatura da CPU como referência.
+
+1. Iniciar o Serviço do RabbitMQ
+Inicie o serviço do RabbitMQ. Em sistemas Linux, você pode fazer isso executando o seguinte comando no terminal:
+
+Copy code
+sudo rabbitmq-server start
+
+2. Execute o produtor de mensagens:
+
+Copy code
+python pt2.py
+
+Se desejar fornecer uma temperatura específica, você pode fazer isso como argumento de linha de comando:
+Copy code
+
+python pt2.py 80.0
+
+3. Executar o Consumidor para Verificar a Temperatura (cdi.py)
+Abra um novo terminal e Execute o consumidor para verificar a temperatura:
+
+Copy code
+python cdi.py
+
+4. Executar o Consumidor para Detectar Incêndio (cda.py)
+Abra um novo terminal e Execute o consumidor para detectar incêndio:
+
+Copy code
+python cda.py
+
+3. Observações
+Certifique-se de que o RabbitMQ esteja em execução antes de executar os códigos. 
