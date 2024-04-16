@@ -48,7 +48,7 @@ Inicie o serviço do RabbitMQ. Em sistemas Linux, você pode fazer isso executan
 `python3 pt.py`
 
 Se desejar fornecer uma temperatura específica, você pode fazer isso como argumento de linha de comando:
-Copy code
+
 
 `python3 pt.py 80.0`
 
@@ -60,5 +60,6 @@ Abra um novo terminal e Execute o consumidor para verificar a temperatura:
 
 ## 4 Executar o Consumidor para Detectar Incêndio (cda.py)
 Abra um novo terminal e Execute o consumidor para detectar incêndio:
+
 
 `python3 cda.py`
