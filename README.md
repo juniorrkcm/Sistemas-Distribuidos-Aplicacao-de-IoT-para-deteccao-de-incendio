@@ -12,7 +12,7 @@ O objetivo deste projeto é desenvolver uma aplicação simples de IoT para simu
 ## Descrição da Atividade
 O projeto consiste na criação de três componentes principais: um produtor de mensagens, um consumidor para verificar a temperatura da CPU e outro consumidor para detectar incêndios.
 
-### Produtor de Mensagens (pt2.py)
+### Produtor de Mensagens (pt.py)
 O produtor de mensagens, desenvolvido em Python, utiliza a biblioteca pika para interagir com o RabbitMQ. Este componente captura a temperatura da CPU (usando a biblioteca psutil) e a publica em um tópico no RabbitMQ chamado "cpu_temperature". Além disso, inclui a opção de fornecer manualmente uma temperatura para simular a temperatura da CPU, permitindo testar a funcionalidade de detecção de incêndio.
 
 ![IMAGEM](https://github.com/juniorrkcm/Sistemas-Distribuidos-Aplicacao-de-IoT-para-deteccao-de-incendio/blob/main/imagens/1.png)
@@ -45,12 +45,12 @@ Inicie o serviço do RabbitMQ. Em sistemas Linux, você pode fazer isso executan
 ## 2 Execute o produtor de mensagens:
 
 
-`python3 pt2.py`
+`python3 pt.py`
 
 Se desejar fornecer uma temperatura específica, você pode fazer isso como argumento de linha de comando:
 Copy code
 
-`python3 pt2.py 80.0`
+`python3 pt.py 80.0`
 
 ## 3 Executar o Consumidor para Verificar a Temperatura (cdi.py)
 Abra um novo terminal e Execute o consumidor para verificar a temperatura:
