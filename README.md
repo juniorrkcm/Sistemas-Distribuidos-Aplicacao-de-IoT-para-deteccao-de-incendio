@@ -15,7 +15,7 @@ O projeto consiste na criação de três componentes principais: um produtor de 
 ### Produtor de Mensagens (pt2.py)
 O produtor de mensagens, desenvolvido em Python, utiliza a biblioteca pika para interagir com o RabbitMQ. Este componente captura a temperatura da CPU (usando a biblioteca psutil) e a publica em um tópico no RabbitMQ chamado "cpu_temperature". Além disso, inclui a opção de fornecer manualmente uma temperatura para simular a temperatura da CPU, permitindo testar a funcionalidade de detecção de incêndio.
 
-![Texto alternativo](C:\Users\Pichau\Desktop\DS\1.png)
+![Texto alternativo](Users\Pichau\Desktop\DS\1.png)
 
 ### Consumidor para Verificar Temperatura (cdi.py)
 Este consumidor recebe mensagens do tópico "cpu_temperature" no RabbitMQ. Ele extrai a temperatura da mensagem recebida, verifica se está acima de um limite predefinido (por exemplo, 70 graus Celsius) e, caso esteja, publica uma mensagem indicando a detecção de incêndio no tópico "fire_detection".
