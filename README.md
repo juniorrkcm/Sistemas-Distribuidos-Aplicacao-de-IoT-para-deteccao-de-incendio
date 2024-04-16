@@ -15,13 +15,17 @@ O projeto consiste na criação de três componentes principais: um produtor de 
 ### Produtor de Mensagens (pt2.py)
 O produtor de mensagens, desenvolvido em Python, utiliza a biblioteca pika para interagir com o RabbitMQ. Este componente captura a temperatura da CPU (usando a biblioteca psutil) e a publica em um tópico no RabbitMQ chamado "cpu_temperature". Além disso, inclui a opção de fornecer manualmente uma temperatura para simular a temperatura da CPU, permitindo testar a funcionalidade de detecção de incêndio.
 
-![IMAGEM](https://github.com/juniorrkcm/Sistemas-Distribuidos-Aplicacao-de-IoT-para-deteccao-de-incendio/blob/main/1.png)
+![IMAGEM](https://github.com/juniorrkcm/Sistemas-Distribuidos-Aplicacao-de-IoT-para-deteccao-de-incendio/blob/main/imagens/1.png)
 
 ### Consumidor para Verificar Temperatura (cdi.py)
 Este consumidor recebe mensagens do tópico "cpu_temperature" no RabbitMQ. Ele extrai a temperatura da mensagem recebida, verifica se está acima de um limite predefinido (por exemplo, 70 graus Celsius) e, caso esteja, publica uma mensagem indicando a detecção de incêndio no tópico "fire_detection".
 
+![IMAGEM](https://github.com/juniorrkcm/Sistemas-Distribuidos-Aplicacao-de-IoT-para-deteccao-de-incendio/blob/main/imagens/2.png)
+
 ### Consumidor para Detectar Incêndio (cda.py)
 O terceiro componente é responsável por receber mensagens do tópico "fire_detection" no RabbitMQ. Quando uma mensagem indicando a detecção de incêndio é recebida, exibe um pop-up de alerta utilizando a biblioteca Tkinter.
+
+![IMAGEM](https://github.com/juniorrkcm/Sistemas-Distribuidos-Aplicacao-de-IoT-para-deteccao-de-incendio/blob/main/imagens/3.png)
 
 ## Conclusão
 A aplicação desenvolvida demonstra a utilização prática de conceitos de IoT para simular a detecção de incêndio com base na temperatura da CPU. O uso do RabbitMQ como sistema de mensagens e a biblioteca psutil para obter informações da CPU permitiram a criação de um sistema simples, porém funcional, para este propósito específico. A inclusão da opção de fornecer manualmente uma temperatura para simular a temperatura da CPU aumentou a robustez do sistema ao permitir testar a funcionalidade de detecção de incêndio mesmo em ambientes onde não era possível obter a temperatura real da CPU.
